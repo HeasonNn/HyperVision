@@ -1,17 +1,56 @@
-/build
-/cache
-/data
-/temp
+# Build artifacts
+/build/
+/cache/
 
+# Data (symlink to external data)
+data
+
+configuration
+results
+
+# Temporary files
+/temp/
+/temp_*/
+/tmp_*/
+*.tmp
+
+# Dependencies
 json.hpp
 
+# Environment
 /env/*/
 !/env/*.sh
 !/env/*.dockerfile
 
-/.vscode
+# IDE
+/.vscode/
+.idea/
 
-
+# Logs
 *.log
-*.png
+results/logs/
+
+# Figures (can be regenerated)
+results/figures/
+
+# Python cache
+__pycache__/
 *.pyc
+*.pyo
+
+# Generated configurations (keep original configs)
+/configuration/ciciiot2025/
+/configuration/cic_apt_iiot2024/
+/configuration/cicids2017/
+/configuration/dohbrw/
+/configuration/unsw_nb15/
+
+# Intermediate result directories
+/results/summary/
+/results/summary_cic_apt_iiot2024/
+/results/summary_dohbrw/
+/results/summary_ciciiot2025_full/
+
+# Other
+*.png
+*.txt
